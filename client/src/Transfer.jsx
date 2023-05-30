@@ -8,6 +8,9 @@ function Transfer({ address, setBalance }) {
   const setValue = (setter) => (evt) => setter(evt.target.value);
 
   async function transfer(evt) {
+  // The transfer function is going to take the private key eventually and is going to use it to generate a signed transaction / a signature
+  // so that way the server can then take that signature and get the public address from it 
+
     evt.preventDefault();
 
     try {
